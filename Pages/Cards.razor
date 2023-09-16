@@ -1,0 +1,77 @@
+﻿@page "/Cards"
+
+<MudContainer>
+    <MudGrid>
+        @foreach (var card in cards)
+        {
+            <MudItem md="4">
+                <MudCard @onclick="@(()=>selectCard(card.Id))" Elevation="@(card.isSelected ? 6 :2)" Style="@(card.isSelected ? "background-color:#81D4FA" : "")">
+                    <MudCardContent>
+                        <MudText>@card.title</MudText>
+                        <MudText Typo="Typo.body2">@card.text</MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudSelect T="int" @bind-Value="@card.selectedItem" Label="Price" Dense="true" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter">
+                            <MudSelectItem T="int" Value="1" />
+                            <MudSelectItem T="int" Value="2" />
+                            <MudSelectItem T="int" Value="3" />
+                        </MudSelect>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+
+    </MudGrid>
+</MudContainer>
+
+@code {
+    public class MyCard
+    {
+        public int Id { get; set; }
+        public string title { get; set; }
+        public string text { get; set; }
+        public int selectedItem { get; set; }
+        public bool isSelected { get; set; }
+    }
+    private void selectCard(int idCard)
+    {
+        foreach(var c in cards)
+        {
+            if (c.Id == idCard)
+            {
+                c.isSelected = true;
+            }
+            else
+            {
+                c.isSelected = false;
+            }
+        }
+    }
+    private List<MyCard> cards = new List<MyCard>
+    {
+        new MyCard
+        {
+            Id = 1,
+            isSelected = false,
+            selectedItem = 1,
+            text ="text 1",
+            title="card 1"
+        },
+        new MyCard
+        {
+            Id = 3,
+            isSelected = true,
+            selectedItem = 1,
+            text ="text 3",
+            title="card 3"
+        },
+        new MyCard
+        {
+            Id = 2,
+            isSelected = false,
+            selectedItem = 2,
+            text ="text 2",
+            title="card 2"
+        }
+    };
+}

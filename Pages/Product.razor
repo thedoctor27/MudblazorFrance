@@ -1,0 +1,127 @@
+﻿@page "/"
+@page "/Product"
+<MudContainer>
+    <MudGrid>
+        <MudItem md="8">
+            <MudCard Class="rounded-xl" Elevation="2">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudGrid>
+                            <MudItem md="8">
+                                <MudText Align="Align.Left" Typo="Typo.h6">Booksy Subscription</MudText>
+                                <MudText Align="Align.Left" Typo="Typo.body2">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit..</MudText>
+                            </MudItem>
+                            <MudItem md="4">
+                                <MudText Align="Align.Right" Typo="Typo.h6">$29.99</MudText>
+                                <MudText Align="Align.Right" Typo="Typo.body2"> / PER MONTH</MudText>
+                            </MudItem>
+                        </MudGrid>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent Style="background-color:lightblue" Class="rounded-b-xl">
+                    <MudGrid>
+                        <MudItem md="6">
+                            <MudList Dense="false">
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                            </MudList>
+                        </MudItem>
+                        <MudItem md="6">
+                            <MudList Dense="false">
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                                <MudListItem Text="Single List Item" Icon="@Icons.Material.Filled.CheckCircle" />
+                            </MudList>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+            </MudCard>
+            <MudCard Class="rounded-xl mt-6" Elevation="2">
+                <MudCardContent Class="rounded-b-xl">
+                    <MudPaper Elevation="0" Class=" pa-4 align-start d-flex" Outlined="false">
+                        <MudIconButton Class="ma-1" Icon="@Icons.Material.Filled.Remove" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" />
+                        <h1 class="ml-1 mr-1" style="vertical-align:middle;"><b>0</b></h1>
+                        <MudIconButton Class="ma-1" Icon="@Icons.Material.Filled.Add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" />
+                        <h1 class="ml-3"><b>Some text where ever</b></h1>
+                        <h2 class="ml-auto" style="text-align:right">
+                            <b>$10.00</b><br />
+                            <small style="font-size:13px;" class="ml-auto">Lorem ipsum dolor sit amet</small>
+                        </h2>
+                    </MudPaper>
+                    <MudPaper Elevation="0" Class=" pr-4 pl-4 pb-6 align-start" Outlined="false">
+                        <MudText Typo="Typo.subtitle2">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit..</MudText>
+                        <MudText Typo="Typo.subtitle2">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit..</MudText>
+
+                    </MudPaper>
+
+
+                </MudCardContent>
+            </MudCard>
+            <MudCard Class="rounded-xl mt-6" Elevation="2">
+                <MudCardContent Class="rounded-b-xl">
+                    <MudPaper Elevation="0" Class=" pa-4 align-start d-flex" Outlined="false">
+                        <MudIconButton Class="ma-1" Icon="@Icons.Material.Filled.Check" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" />
+                        <h1 class="ml-3"><b>BOOST</b></h1>
+                        <MudChip Label="true" Size="Size.Small" Color="Color.Dark"> OPTIONAL</MudChip>
+
+                        <h2 class="ml-auto" style="text-align:right">
+                            <b>Commission Fee</b><br />
+                            <small style="font-size:13px;" class="ml-auto">Lorem ipsum dolor sit amet</small>
+                        </h2>
+                    </MudPaper>
+                    <MudPaper Elevation="0" Class=" pr-4 pl-4 pb-6 align-start" Outlined="false">
+                        <MudText Typo="Typo.subtitle2">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit..</MudText>
+                        <MudText Typo="Typo.subtitle2">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit..</MudText>
+
+                    </MudPaper>
+
+
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+        <MudItem md="4">
+            <MudCard Elevation="4" Style="background-color:lightblue">
+                <MudCardHeader Style="background-color:white">
+                    <CardHeaderContent>
+                        <MudText Align="Align.Left" Class="pa-4" Typo="Typo.h4"><b> Summary </b></MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent Style="border-top:2px;background-color:white" Class="rounded-b-xl">
+                    <MudGrid>
+                        <MudItem md="7">
+                            <MudText Align="Align.Left" Typo="Typo.h6">Booksy subscription </MudText>
+                        </MudItem>
+                        <MudItem md="5">
+                            <MudText Align="Align.Right" Typo="Typo.h6">$29.99 </MudText>
+                        </MudItem>
+                    </MudGrid>
+                    <MudGrid>
+                        <MudItem md="7">
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">Booksy boost </MudText>
+                        </MudItem>
+                        <MudItem md="5">
+                            <MudText Align="Align.Right" Typo="Typo.subtitle2">Commmision fee </MudText>
+                            <MudText Align="Align.Right" Typo="Typo.caption"> / PER EACH NEW CLIENT</MudText>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudGrid Class="pa-3">
+                        <MudItem md="7">
+                            <MudText Align="Align.Left" Typo="Typo.h6">PER MONTH </MudText>
+                        </MudItem>
+                        <MudItem md="5">
+                            <MudText Align="Align.Right" Typo="Typo.h4"><b>$29.99</b> </MudText>
+                            <MudText Align="Align.Right" Typo="Typo.body2"> + Commission fee</MudText>
+                        </MudItem>
+                        <MudItem md="12" Class="pa-5">
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true">START FREE TRIAL</MudButton>
+
+                        </MudItem>
+                    </MudGrid>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
